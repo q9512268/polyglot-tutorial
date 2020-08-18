@@ -1,0 +1,9 @@
+/**
+ * Test that elements of a const array cannot be assigned values.
+ */
+class C {
+    void foo() {
+        int const[] a = new int[3];
+        a[0] = 1;
+    }
+}

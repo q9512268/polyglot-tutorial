@@ -1,0 +1,24 @@
+// Assumes polyglot.jar is in classpath
+include "polyglot/parse/java12.cup"
+
+package carray.parse;
+
+import carray.types.CArrayTypeSystem;
+import carray.ast.CArrayNodeFactory;
+import polyglot.parse.Name;
+import polyglot.parse.VarDeclarator;
+
+parser Grm extends polyglot.parse.Grm {:
+    public final CArrayTypeSystem ts;
+    public final CArrayNodeFactory nf;
+
+    public Grm(Lexer l, TypeSystem t, NodeFactory n, ErrorQueue q) {
+        super(l, t, n, q);
+        ts = (CArrayTypeSystem) t;
+        nf = (CArrayNodeFactory) n;
+    }
+:};
+
+start with goal;
+
+// TODO: modify the default Java grammar using PPG operations

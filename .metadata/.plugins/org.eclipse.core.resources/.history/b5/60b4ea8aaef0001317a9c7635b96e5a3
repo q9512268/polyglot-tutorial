@@ -1,0 +1,9 @@
+class CArrayCast {
+    Object[] oa;
+    String[] sa;
+
+    void foo() {
+        Object[] oa1 = (Object[]) sa;
+        String[] sa1 = (String[]) oa;
+    }
+}

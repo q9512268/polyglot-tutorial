@@ -1,0 +1,16 @@
+/**
+ * Test that const arrays can be subtyped covariantly.
+ */
+import java.util.*;
+
+class C {
+    Object const[] a;
+    Set const[] b;
+
+    public void foo() {
+        a = new Object[]{new HashSet(), new HashSet()};
+        b = (Set const[]) a;
+        a = b;
+    }
+
+}

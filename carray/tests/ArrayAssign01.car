@@ -1,0 +1,11 @@
+/**
+ * Test that we cannot assign a const array to a non-const array.
+ */
+class C {
+    int const[] a = {1, 2, 3};
+    int[] b;
+
+    public void foo() {
+        b = a;
+    }
+}

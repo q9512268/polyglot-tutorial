@@ -1,0 +1,6 @@
+class C {
+    void foo() {
+        int const[][] aai = { { 1, 2, 3 } };
+        String const[] as = { "Hello", "World!" };
+    }
+}

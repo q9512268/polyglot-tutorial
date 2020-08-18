@@ -1,0 +1,42 @@
+public class Hello {
+    
+    public static void main(String[] args) {
+        System.out.println("Hello world!");
+    }
+    
+    public Hello() { super(); }
+    
+    public static final String jlc$CompilerVersion$jl = "2.6.1";
+    public static final long jlc$SourceLastModified$jl = 1402411819705L;
+    public static final String jlc$ClassType$jl =
+      ("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" +
+       "KOclkP8X9vTxZWYKAAA=");
+}

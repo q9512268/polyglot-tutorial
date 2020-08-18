@@ -1,0 +1,8 @@
+public class Serial01a {
+    int const[] foo() {
+        return new int[]{1, 2, 3};
+    }
+
+    void bar(int[] x) {
+    }
+}

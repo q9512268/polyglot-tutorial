@@ -1,0 +1,52 @@
+# pth test script
+#
+# This file is a test script for pth (Polyglot Test Harness). It
+# conforms to the following grammar.
+#
+#      ScriptFile   ::= CompilerTest+
+#      CompilerTest ::= ExtClassName ["CmdLineArgs"] { FileTest [; FileTest]* }
+#      FileTest     ::= CompilationUnits [Description] [FailureSet]
+#  CompilationUnits ::= Filenames [, Filenames]*
+#      Filenames    ::= Filename [Filename]*
+#      Description  ::= LitString
+#      FailureSet   ::= Failure [, Failure]*
+#      Failure      ::= ( ErrorKind )
+#                    |  ( ErrorKind, "RegExp" )
+#                    |  ( "RegExp" )
+#                    |  ( )
+#      ErrorKind    :   one of, or a unique prefix of one of the following 
+#                       strings: "Warning", "Internal Error", "I/O Error", 
+#                       "Lexical Error", "Syntax Error", "Semantic Error"
+#                       or "Post-compiler Error".
+#      Filename     :   the name of a file. Is interpreted from the 
+#                       directory where pth is run.
+#      LitString    :   a literal string, enclosed in quotes.
+#      RegExp       :   a regular expression, as in java.util.regex; 
+#                       is always enclosed in quotes.
+#      CmdLineArgs  :   additional command line args for the Polyglot 
+#                       compiler; is always enclosed in quotes.
+
+carray.ExtensionInfo "-d out" {
+    Hello.car;
+    ArrayAccess01.car;
+    ConstArrayDecl01.car;
+    ConstArrayDecl02.car
+        (Semantic, "Cannot assign"),
+        (Semantic, "Cannot initialize");
+    ConstArrayDecl03.car;
+    ConstArrayInit01.car;
+    ArrayAccessAssign01.car (Semantic, "Cannot assign a value to an element of a const array");
+    Cast01.car (Semantic, "Cannot cast the expression");
+    Cast02.car;
+    Cast03.car
+        (Semantic, "Cannot cast"),
+        (Semantic, "Cannot cast");
+    ArrayAssign01.car (Semantic, "Cannot assign");
+    ArrayAssign02.car (Semantic, "Method .* cannot be called with arguments");
+    ArrayAssign03.car;
+    Subtype01.car;
+    Subtype02.car
+        (Semantic, "Cannot cast"),
+        (Semantic, "Cannot assign");
+    Serial01a.car, Serial01b.car (Semantic, "Method .* cannot be called with arguments");
+}

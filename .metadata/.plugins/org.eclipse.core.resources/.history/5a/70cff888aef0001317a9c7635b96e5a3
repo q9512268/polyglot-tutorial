@@ -1,0 +1,6 @@
+class Serial01b {
+    void foo() {
+        Serial01a s = new Serial01a();
+        s.bar(s.foo());
+    }
+}

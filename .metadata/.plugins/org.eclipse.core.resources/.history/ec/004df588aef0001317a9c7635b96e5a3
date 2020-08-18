@@ -1,0 +1,13 @@
+/**
+ * Test that const arrays cannot be cast away.
+ */
+class C {
+    int const[] a;
+    int[] b;
+
+    public void foo() {
+        int[] c = (int[]) a;
+        int const[] d = b;
+    }
+
+}

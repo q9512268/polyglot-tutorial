@@ -1,0 +1,42 @@
+public class Hello {
+    
+    public static void main(String[] args) {
+        System.out.println("Hello world!");
+    }
+    
+    public Hello() { super(); }
+    
+    public static final String jlc$CompilerVersion$jl = "2.6.1";
+    public static final long jlc$SourceLastModified$jl = 1402408693653L;
+    public static final String jlc$ClassType$jl =
+      ("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" +
+       "o5yXQP5fT7GOb2YKAAA=");
+}

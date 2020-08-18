@@ -1,0 +1,13 @@
+/**
+ * Test that const arrays can be downcast to const arrays.
+ */
+class C {
+    String const[] a;
+    Object const[] b;
+
+    public void foo() {
+        Object const[] c = (Object const[]) a;
+        String const[] d = (String const[]) b;
+    }
+
+}

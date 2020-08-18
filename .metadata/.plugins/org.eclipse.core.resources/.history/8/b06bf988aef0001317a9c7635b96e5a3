@@ -1,0 +1,16 @@
+/**
+ * Test that non-const arrays cannot be subtyped covariantly.
+ */
+import java.util.*;
+
+class C {
+    Object[] a;
+    Set[] b;
+
+    public void foo() {
+        a = new Object[]{new HashSet(), new HashSet()};
+        b = (Set[]) a;
+        a = b;
+    }
+
+}

@@ -1,0 +1,8 @@
+/**
+ * Test that const arrays can be formal and local.
+ */
+class C {
+    public void foo(int const [] a) {
+        int const [] b;
+    }
+}

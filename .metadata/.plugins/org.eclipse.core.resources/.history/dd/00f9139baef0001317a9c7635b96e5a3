@@ -1,0 +1,51 @@
+import java.util.*;
+
+class C {
+    Object[] a;
+    Set[] b;
+    
+    public void foo() {
+        a = (new Object[] { new HashSet(), new HashSet() });
+        b = (Set[]) a;
+        a = b;
+    }
+    
+    public C() { super(); }
+    
+    public static final String jlc$CompilerVersion$jl = "2.6.1";
+    public static final long jlc$SourceLastModified$jl = 1402411819834L;
+    public static final String jlc$ClassType$jl =
+      ("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" +
+       "u6B72PkXdFM12/wLAAA=");
+}

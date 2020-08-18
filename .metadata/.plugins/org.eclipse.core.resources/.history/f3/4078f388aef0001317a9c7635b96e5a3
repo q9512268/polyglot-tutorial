@@ -1,0 +1,10 @@
+/**
+ * Test that an element of a const array can be accessed for reading.
+ */
+class C {
+    int const [] a = {1, 2, 3};
+
+    public int foo() {
+        return a[1] + 9;
+    }
+}
